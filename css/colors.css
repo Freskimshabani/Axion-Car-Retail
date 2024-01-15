@@ -1,0 +1,12 @@
+:root {
+    --primaryColor: #50aae7;
+    --darkColor: #000000;
+    --lightColor: #ffffff;
+    --lightColor2: #eeeeee;
+    --borderColor: #dddddd;
+    --textColor: #ffffff;
+    --textColor2: #757575;
+    --textColor3: #000000;
+    --errorColor: #e75050;
+    --successColor: #43c252;
+}

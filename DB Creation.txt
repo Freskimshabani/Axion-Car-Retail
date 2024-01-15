@@ -1,0 +1,15 @@
+CREATE DATABASE axiondb
+
+USE axiondb
+
+CREATE TABLE user (
+	user_id INT PRIMARY KEY AUTO_INCREMENT, 
+	username TEXT UNIQUE NOT NULL,
+	email TEXT NOT NULL,
+	password TEXT NOT NULL,
+	role TEXT DEFAULT 'User',
+	status TEXT DEFAULT 'Active',
+	date_created DATE DEFAULT CURRENT_TIMESTAMP,
+	date_updated DATE DEFAULT CURRENT_TIMESTAMP,
+	profile_image_path TEXT DEFAULT 'emptyprofileimg.webp'
+);

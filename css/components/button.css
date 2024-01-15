@@ -1,0 +1,49 @@
+@import url(../colors.css);
+
+.button-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+}
+
+.default-button {
+    background-color: var(--lightColor2);
+}
+
+.menu-button {
+    color: var(--lightColor);
+    font-size: 1rem;
+}
+
+.menu-button:hover {
+    color: var(--primaryColor);
+}
+
+.primary-button:hover {
+    background-color: var(--lightColor);
+    color: var(--primaryColor);
+}
+
+.default-button:hover {
+    background-color: var(--borderColor);
+}
+
+.error-button {
+    background-color: var(--errorColor);
+    color: var(--lightColor);
+}
+
+.success-button {
+    background-color: var(--successColor);
+    color: var(--lightColor);
+}

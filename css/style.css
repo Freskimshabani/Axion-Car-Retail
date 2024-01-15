@@ -1,0 +1,911 @@
+@import url(colors.css);
+@import url(components.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 0.3rem;
+    font-family: Montserrat, sans-serif;
+    border-spacing: 0;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: var(--darkColor);
+}
+
+*::-webkit-scrollbar-thumb {
+    color: var(--primaryColor);
+    background-color: var(--primaryColor);
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#headerCarousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#homeServices {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeServicesGrid {
+    display: grid;
+}
+
+#homeOffers {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeFAQ {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeFAQContent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border: 1px solid var(--borderColor);
+}
+
+#homeFAQContentButtons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-right: 1px solid var(--borderColor);
+}
+
+#homeFAQContentContainer {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    gap: 1rem;
+    scroll-behavior: smooth;
+}
+
+#buySection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#buySectionContent {
+    position: relative;
+    border: 1px solid var(--borderColor);
+}
+
+#buySectionContentButtons {
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+#buySectionContentCards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#sellSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sellSectionContent {
+    position: relative;
+}
+
+#aboutSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactSectionContent {
+    display: flex;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 425px) {
+
+    :root {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 0.8rem;
+        display: flex;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+
+    #desktopNav {
+        display: none;
+    }
+
+    #mobileLogoNav {
+        height: 1rem;
+    }
+
+    #mobileNav {
+        display: flex;
+    }
+
+    #mobileNavMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 100000;
+        padding: 5rem;
+        background-color: var(--darkColor);
+        transition: all ease 0.3s;
+        transform: translateX(100%);
+    }
+
+    .mobile-menu-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #headerHeading {
+        padding: 3rem;
+        text-align: center;
+    }
+
+    #homeServices {
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    #homeOffers {
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    #homeFAQ {
+        gap: 1rem;
+        padding: 3rem;
+    }
+
+    #buySection {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    #sellSection {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    #aboutSection {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    #contactSection {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    #contactSectionContent {
+        flex-direction: column;
+    }
+
+    #homeServicesGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #homeServicesGridMainImage {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    #homeServicesGridTopImage {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    #homeServicesGridBottomImage {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    #homeFAQContent {
+        position: relative;
+        overflow-x: clip;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3rem 1fr;
+    }
+
+    #homeFAQContentButtons {
+        width: 100%;
+        grid-column: 1 /span 1;
+        grid-row: 1 / span 1;
+        justify-content: space-between;
+    }
+
+    #homeFAQContentButtonMenuButton {
+        width: 100%;
+    }
+
+    #homeFAQContentMenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: all ease 0.3s;
+    }
+
+    #buySectionContentCards {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    #sellSectionContent {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .faq-content-button {
+        display: flex;
+    }
+
+    .footer-group {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .footer-ul-style {
+        align-items: center;
+    }
+
+    #copyrightSection {
+        font-size: 0.6rem;
+        padding: 1rem;
+    }
+
+    .card-carousel-card {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .image-carousel-buttons {
+        padding: 1rem;
+        bottom: 0;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .grid-image-description {
+        padding: 1rem;
+    }
+
+    .grid-image-sticker {
+        padding: 0.8rem 1rem;
+    }
+
+    .buy-content-card {
+        flex-direction: column;
+    }
+
+    .buy-content-card-description {
+        flex: 1;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlighted-span {
+        font-size: 1.5rem;
+    }
+
+    #buyResults {
+        display: none;
+    }
+
+    .profile-image {
+        width: auto;
+        height: 100%;
+        border-radius: 10rem;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    :root {
+        font-size: 16px;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 6.25rem;
+    }
+
+    #desktopLogoNav {
+        height: 2rem;
+    }
+
+    #mobileNav {
+        display: none;
+    }
+
+    #mobileNavMenu {
+        display: none;
+    }
+
+    #headerHeading {
+        padding: 12rem 20rem;
+    }
+
+    #homeServices {
+        gap: 2rem;
+        padding: 5rem;
+    }
+
+    #homeOffers {
+        gap: 2rem;
+        padding: 5rem;
+    }
+
+    #homeFAQ {
+        gap: 2rem;
+        padding: 5rem;
+    }
+
+    #buySection {
+        padding: 5rem;
+        gap: 2rem;
+    }
+
+    #sellSection {
+        padding: 5rem;
+        gap: 2rem;
+    }
+
+    #aboutSection {
+        padding: 5rem;
+        gap: 2rem;
+    }
+
+    #contactSection {
+        padding: 5rem;
+        gap: 2rem;
+    }
+
+    #homeServicesGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #homeServicesGridMainImage {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    #homeServicesGridTopImage {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    #homeServicesGridBottomImage {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    #homeFAQContent {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #homeFAQContentContainer {
+        padding: 1rem;
+
+    }
+
+    #homeFAQContentButtons {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #homeFAQContentButtonMenuButton {
+        display: none;
+    }
+
+    #homeFAQContentMenu {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        flex-direction: column;
+        display: flex;
+    }
+
+    #faqContentMenuButton {
+        display: none;
+    }
+
+    #buySectionContentCards {
+        padding: 5rem;
+        gap: 5rem;
+    }
+
+    #copyrightSection {
+        font-size: 0.8rem;
+        padding: 2rem;
+    }
+
+    .card-carousel-card {
+        flex: 1;
+    }
+
+    .card-carousel-image-box {
+        flex: 2;
+    }
+
+    .card-carousel-description-box {
+        flex: 1;
+    }
+
+    .buy-content-card-description {
+        flex: 1;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-image-description {
+        padding: 1rem;
+    }
+
+    .grid-image-sticker {
+        padding: 1rem 2rem;
+    }
+
+    .highlighted-span {
+        font-size: 2rem;
+    }
+
+    #desktopProfile {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: auto;
+        height: 100%;
+        border-radius: 10rem;
+    }
+
+    .profile-span {
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#copyrightSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightColor);
+}
+
+.nav-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-span {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--lightColor);
+}
+
+.header-heading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: var(--lightColor);
+    backdrop-filter: brightness(0.5);
+    gap: 1rem;
+}
+
+.section-style {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.section-style:nth-child(odd) {
+    background-color: var(--darkColor);
+}
+
+.section-style:nth-child(even) {
+    background-color: var(--lightColor);
+}
+
+.section-heading {
+    text-align: center;
+    font-weight: 400;
+}
+
+.section-style:nth-child(odd) .section-heading {
+    color: var(--lightColor);
+}
+
+.section-content {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-image-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+}
+
+.grid-image {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.grid-image:hover {
+    transform: scale(1.1);
+}
+
+.grid-image-sticker {
+    background-color: var(--primaryColor);
+    position: absolute;
+    color: var(--lightColor);
+    top: 0;
+    left: 1;
+}
+
+.grid-image-description {
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    z-index: 100;
+}
+
+.grid-image-description a {
+    transition: color 0.3s ease;
+    color: var(--lightColor);
+}
+
+.grid-image-description a:hover {
+    color: var(--primaryColor);
+}
+
+.faq-content-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightColor2);
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--textColor2);
+}
+
+.faq-content-button:last-child {
+    border: none;
+}
+
+.faq-content-container-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--borderColor);
+    padding: 2rem;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+.faq-content-container-title {
+    font-weight: 400;
+}
+
+.faq-content-container-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buy-content-buttons {
+    z-index: 100;
+}
+
+.buy-content-buttons-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buy-content-buttons-top>* {
+    border: 1px solid var(--borderColor);
+}
+
+.buy-content-buttons-side>* {
+    border: 1px solid var(--borderColor);
+}
+
+.buy-content-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.buy-content-card-description-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--borderColor);
+}
+
+.buy-content-card-description {
+    width: 100%;
+    display: grid;
+}
+
+.buy-content-card-description-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    outline: 1px solid var(--borderColor);
+}
+
+.buy-content-card-description-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.buy-content-card-description-buttons button {
+    border: 1px solid var(--borderColor);
+}
+
+.results-span {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightColor);
+    border: 1px solid var(--borderColor);
+}
+
+.result-message {
+    font-size: 0.6rem;
+}
+
+.sell-section-description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    backdrop-filter: brightness(0.5);
+    z-index: 100;
+    color: var(--lightColor);
+}
+
+.contact-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.contact-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-link button {
+    width: 100%;
+    font-size: 2.5rem;
+    border: 1px solid var(--borderColor);
+}
+
+.highlighted-span {
+    font-weight: 600;
+}
+
+.profile-section {
+    display: flex;
+    color: var(--lightColor);
+    text-transform: uppercase;
+}
+
+.img-style {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.footer-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.footer-span {
+    display: flex;
+}
+
+.footer-ul-style {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-ul-title {
+    font-size: 1.3rem;
+}
+
+.footer-link {
+    color: var(--lightColor);
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid var(--lightColor);
+}
+
+.footer-link:hover {
+    color: var(--primaryColor);
+}
+
+.list-item-style:hover .footer-link {
+    color: var(--primaryColor);
+}
+
+.logo {
+    min-width: 100%;
+    height: 100%;
+}
+
+.logo-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo .cls-1 {
+    fill: var(--primaryColor);
+}
+
+.logo .cls-2 {
+    fill: var(--lightColor);
+}
+
+.hide {
+    display: none;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1000;
+}
+
+#loginMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    display: flex;
+}

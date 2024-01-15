@@ -1,0 +1,28 @@
+@import url(colors.css);
+
+.input-group {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--borderColor);
+}
+
+.input-style {
+    width: 100%;
+    display: flex;
+    border: none;
+    color: var(--textColor2);
+    padding: 1rem;
+    text-transform: uppercase;
+    background-color: var(--lightColor);
+}
+
+.textarea-style {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: none;
+    color: var(--textColor2);
+    background-color: var(--lightColor);
+    padding: 1rem;
+    text-transform: uppercase;
+}
